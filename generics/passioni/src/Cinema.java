@@ -11,6 +11,14 @@ public class Cinema extends Passionisioni implements Classificabile{
         super(titolo);
     }
 
+    public Cinema(int annouscita, String attfemminile, String attmaschile, String nomeregista, String titolo2) {
+        super(titolo2);
+        this.annouscita = annouscita;
+        this.attfemminile = attfemminile;
+        this.attmaschile = attmaschile;
+        this.nomeregista = nomeregista;
+    }
+
     
 
     @Override

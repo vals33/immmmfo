@@ -6,6 +6,12 @@ public class Musica extends Passionisioni implements Classificabile{
         super(titolo);
     }
 
+    public Musica(String artista, int tracce, String titolo2) {
+        super(titolo2);
+        this.artista = artista;
+        this.tracce = tracce;
+    }
+
     
 
     @Override

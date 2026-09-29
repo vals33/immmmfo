@@ -3,6 +3,15 @@ public class Libri extends Passionisioni implements Classificabile{
     int numpagine;
     String ISBN;
 
+    public Libri(String titolo2, String autore, int numpagine, String iSBN) {
+        super(titolo2);
+        this.autore = autore;
+        this.numpagine = numpagine;
+        ISBN = iSBN;
+    }
+
+
+
     public Libri(String titolo) {
         super(titolo);
     }
