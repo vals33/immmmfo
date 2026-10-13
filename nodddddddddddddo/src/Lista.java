@@ -57,6 +57,45 @@ public class Lista <T>{
         return ext.getDato();
     }
 
+    public void insert(T dato, int i){
+        if(i<0 || i > this.lenght()){
+            throw new IndexOutOfBoundsException();
+        }
+        if(this.testa == null){
+            this.testa = new Nodo(dato, null);
+        } else if (i == 0){
+            Nodo nuovo = new Nodo(dato, this.testa);
+            this.testa = nuovo;
+        }
+        else{
+            Nodo scan = this.testa;
+            for (int j = 0; j < i-1; j++) {
+                scan = scan.getSucc();
+            }
+            Nodo nuovo = new Nodo(dato, scan.getSucc());
+            scan.setSucc(nuovo);
+        }
+    }
+
+    public void add(T dato){
+        this.insert(dato, this.lenght());
+    }
+
+    public void remove(int in){
+        if(in<0 || in> this.lenght())  throw new IndexOutOfBoundsException();
+        else if(in== 0) {
+            this.testa = this.testa.getSucc();
+        }
+        else{
+            Nodo scan = this.testa;
+             for (int i = 0; i < in-1; i++) {
+                scan = scan.getSucc();
+            }
+            scan.setSucc(scan.getSucc().getSucc());
+        
+        }
+    }
+
 }
 
 /*
