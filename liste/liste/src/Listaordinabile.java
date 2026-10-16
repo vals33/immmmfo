@@ -1,6 +1,6 @@
 public class Listaordinabile <T extends Comparable<T>> extends Lista<T> {
-    @Override 
-    public void insert(T element, int p){
+    
+    public void insertohordinatoh(T element, int p){
         int l = this.length();
         if (p < 0 || p > l) {
             throw new IndexOutOfBoundsException("Posizione " + p + " fuori dai limiti");
