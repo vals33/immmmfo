@@ -1,0 +1,26 @@
+Considera un convoglio composto da:
+- locomotiva di testa
+- locomotiva di coda
+- vagoni merci
+- vagoni passeggeri 
+
+Si desidera rappresentare al massimo 4 convogli fermi in una determinata stazione.
+ Tutti i vagoni che non fanno parte di un convoglio stazionano in una speciale area parcheggio.
+
+Alcune note:
+- usa liste doppiamente concatenate
+- specializza il tipo Vagone per rappresentare i tipi di Locomotiva (quella di testa è sempre HEAD) e Vagone (Merci o Passeggeri).
+ I tipi Vagone e Passeggeri posseggono un campo aggiuntivo intero che rappresenta il numero di passeggeri o merci presenti.
+- i convogli devono sempre possedere una locomotiva di testa e una di coda.
+
+Una volta implementate le strutture necessarie alla rappresentazione, costruisci un menù che permetta di svolgere le seguenti operazioni:
+- aggiungi vagone (di qualsiasi tipo)
+- rimuovi vagone
+- sposta un vagone da un convoglio ad un altro
+- sposta un vagone dal parcheggio ad un convoglio e viceversa
+- stampa convoglio
+- contare il numero di passeggeri e merci presenti su ogni convoglio.
+
+N.B.
+Per conoscere la Classe di un oggetto SW in JAVA si può utilizzare: getClass() . 
+Per ottenere la stringa corrispondente al nome della classe si può usare getName() sulla classe.
