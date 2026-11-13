@@ -1,18 +1,28 @@
+import java.util.LinkedList;
+
 public class Convogliodiginevra {
-    ListaDouble<? super Vagone> consigliodiginevra;
+    public class Convoglio {
+    private LinkedList<Locomotiva> lista;
 
-    public Convogliodiginevra(Locomotiva hed, Locomotiva cods) {
-        consigliodiginevra.add(cods);
-        consigliodiginevra.add(cods);
-        consigliodiginevra.insert(hed, 0);
+    public Convoglio(Locomotiva testa, Locomotiva coda) {
+        this.lista = new LinkedList<>();
+        this.lista.add(testa);
+        this.lista.add(coda);
     }
 
-    public void add(Vagone vags){
-        if(vags.getClass().getName().equals("Locomotiva")){
-            throw new IllegalArgumentException();
-        }
-        else this.consigliodiginevra.insert(vags, 1);
+    public void aggiungiVagone(Vagone v) {
+        lista.insert(v, 1);
     }
+
+    public void stampaConvoglio() {
+        lista.printLine();
+    }
+
+    public LinkedList<Locomotiva> getLista() {
+        return lista;
+    }
+
+}
 
     
 }
